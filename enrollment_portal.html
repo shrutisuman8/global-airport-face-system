@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Global Airways Passenger Portal</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:linear-gradient(120deg,#1e3c72,#2a5298);
+margin:0;
+padding:0;
+color:white;
+text-align:center;
+}
+
+.container{
+width:420px;
+margin:auto;
+margin-top:40px;
+background:white;
+color:black;
+padding:30px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+h1{
+margin-top:30px;
+}
+
+input{
+width:90%;
+padding:10px;
+margin:8px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button{
+padding:10px 20px;
+background:#1e3c72;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+margin-top:10px;
+}
+
+button:hover{
+background:#2a5298;
+}
+
+.section{
+margin-top:25px;
+}
+
+.tabs{
+display:flex;
+justify-content:center;
+margin-bottom:20px;
+}
+
+.tabs button{
+margin:5px;
+}
+
+.hidden{
+display:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Global Airways Passenger Portal</h1>
+
+<div class="container">
+
+<div class="tabs">
+
+<button onclick="showTab('register')">Sign Up</button>
+
+<button onclick="showTab('login')">Login</button>
+
+</div>
+
+
+<!-- REGISTER -->
+
+<div id="register">
+
+<h3>Create Account</h3>
+
+<input id="regName" placeholder="Full Name">
+
+<input id="regEmail" placeholder="Email">
+
+<input id="regPassword" type="password" placeholder="Password">
+
+<button onclick="registerUser()">Register</button>
+
+</div>
+
+
+<!-- LOGIN -->
+
+<div id="login" class="hidden">
+
+<h3>Login</h3>
+
+<input id="loginEmail" placeholder="Email">
+
+<input id="loginPassword" type="password" placeholder="Password">
+
+<button onclick="loginUser()">Login</button>
+
+</div>
+
+
+<div class="section">
+
+<h3>Upload Face Biometrics</h3>
+
+<input type="file" id="faceFile">
+
+<button onclick="uploadFace()">Upload Face</button>
+
+</div>
+
+
+<div class="section">
+
+<h3>Book Flight</h3>
+
+<input id="flightId" placeholder="Flight ID">
+
+<button onclick="bookFlight()">Book Flight</button>
+
+</div>
+
+
+<div class="section">
+
+<h3>Your Flights</h3>
+
+<button onclick="loadFlights()">Load Flights</button>
+
+<ul id="flightList"></ul>
+
+</div>
+
+</div>
+
+
+<script>
+
+function showTab(tab){
+
+document.getElementById("register").classList.add("hidden");
+document.getElementById("login").classList.add("hidden");
+
+document.getElementById(tab).classList.remove("hidden");
+
+}
+
+</script>
+
+<script src="/script.js"></script>
+
+</body>
+</html>

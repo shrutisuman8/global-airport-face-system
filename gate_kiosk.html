@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Airport Gate Scanner</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+
+<div class="logo">✈ Global Airways</div>
+
+<div class="menu">
+<a href="/dashboard.html">Dashboard</a>
+<a href="/gate_kiosk.html">Gate Kiosk</a>
+<a href="/login.html">Logout</a>
+</div>
+
+</div>
+
+<h1 class="title">Gate Biometric Scanner</h1>
+
+<div class="scanner">
+
+<video id="gateCamera" autoplay muted playsinline style="width:400px;height:300px;background:black;"></video>
+
+<button onclick="scanPassenger()">Scan Passenger</button>
+
+<div id="scanResult"></div>
+
+</div>
+
+<script src="/script.js"></script>
+
+</body>
+
+</html>

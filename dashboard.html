@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Passenger Dashboard</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+<div class="logo">✈ Global Airways</div>
+
+<div class="menu">
+<a href="/dashboard.html">Dashboard</a>
+<a href="/gate_kiosk.html">Gate Kiosk</a>
+<a href="/login.html">Logout</a>
+</div>
+</div>
+
+<h1 class="title">Passenger Dashboard</h1>
+
+<div class="dashboard">
+
+<div class="card">
+
+<h2>Upload Face Biometrics</h2>
+
+<video id="camera" autoplay muted playsinline style="width:320px;height:240px;background:black;"></video>
+</div>
+
+
+<div class="card">
+
+<h2>Book Flight</h2>
+
+<select id="flightId">
+<option value="1">AC101 – New York</option>
+<option value="2">BA202 – London</option>
+<option value="3">AI303 – Delhi</option>
+</select>
+
+<button onclick="bookFlight()">Book Flight</button>
+
+</div>
+
+
+<div class="card">
+
+<h2>My Flights</h2>
+
+<button onclick="loadFlights()">Load Flights</button>
+
+<div id="flightCards"></div>
+
+</div>
+
+</div>
+
+<script src="/script.js"></script>
+
+</body>
+</html>
